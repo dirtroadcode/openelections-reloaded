@@ -1,5 +1,5 @@
 {
-  description = "OpenElections workspace — shared tooling for parser and data work";
+  description = "OpenElections Reloaded — shared tooling for parser and data work";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -13,10 +13,9 @@
       forAllSystems = f: nixpkgs.lib.genAttrs systems (system: f nixpkgs.legacyPackages.${system});
     in
     {
-      # The OpenElections clones (docs/, openelections-core/, specs/, ...) are
-      # gitignored siblings, not part of this repo, so this flake cannot build
-      # or run their code from a clean checkout. It supplies the shared tooling
-      # for working inside them; install each repo's own dependencies there.
+      # The framework lives in core/ and state data under the gitignored data/.
+      # This shell supplies shared tooling only; per-package shells and packages
+      # for core/ and the tests are pending.
       devShells = forAllSystems (pkgs: {
         default = pkgs.mkShell {
           packages = [

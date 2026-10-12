@@ -1,10 +1,14 @@
-# Each top-level directory is an independent OpenElections clone (docs/,
-# openelections-core/, specs/, ...). The wildcard ignores all of them,
-# including clones added later, so this file never needs a per-repo entry.
-/*/
+# Per-state data clones and pipeline output. These are tens of gigabytes across
+# the project and stay on the machine that runs the pipeline; they never enter
+# the repo. Clone state data repos under data/.
+/data/
 
-# Re-include directories that belong to this meta-repo.
-!/scripts/
+# Not yet imported into the monorepo. Delete each line when its subtree lands.
+/docs/
+/specs/
+/openelections-data-tests/
 
-# Local-only values; .envrc is tracked, .env.local is not.
+# Local-only environment and agent state.
 .env.local
+.direnv/
+.pi/
