@@ -26,8 +26,13 @@ in this repo. A directory that belongs to the meta-repo instead (like
 
 ## Environment
 
-`.envrc` (direnv) loads the workspace environment. `.env.local` holds local-only
-values and is not tracked.
+`.envrc` (direnv) loads the dev shell from `flake.nix`; use `nix develop` if
+direnv is not active. `.env.local` holds local-only values and is not tracked.
+
+The flake provides shared tooling only (Python, pipenv, git, jq, csvkit). The
+sibling clones are gitignored, so a clean checkout contains none of their code
+and the flake cannot build or run it — install each repo's own dependencies
+within that repo.
 
 ## Git identity
 
