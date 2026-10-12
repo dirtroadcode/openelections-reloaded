@@ -1,0 +1,10 @@
+# Each top-level directory is an independent OpenElections clone (docs/,
+# openelections-core/, specs/, ...). The wildcard ignores all of them,
+# including clones added later, so this file never needs a per-repo entry.
+/*/
+
+# Re-include directories that belong to this meta-repo.
+!/scripts/
+
+# Local-only values; .envrc is tracked, .env.local is not.
+.env.local
