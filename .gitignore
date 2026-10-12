@@ -3,9 +3,6 @@
 # the repo. Clone state data repos under data/.
 /data/
 
-# Not yet imported into the monorepo. Delete each line when its subtree lands.
-/docs/
-
 # Local-only environment and agent state.
 .env.local
 .direnv/
