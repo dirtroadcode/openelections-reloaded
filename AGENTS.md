@@ -11,7 +11,7 @@ results data does not.
 | `core/`                    | parser/loader framework, Python package `openelex`              |
 | `docs/`                    | project documentation (pending import)                          |
 | `specs/`                   | data formats and specifications (pending import)                |
-| `openelections-data-tests/`| validation tests for data files (pending import)                |
+| `tests/`                   | validation tests for data files                                 |
 | `data/`                    | gitignored; per-state data clones and pipeline output           |
 
 ## Data stays local
