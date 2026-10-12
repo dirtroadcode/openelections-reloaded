@@ -10,7 +10,7 @@ results data does not.
 | -------------------------- | --------------------------------------------------------------- |
 | `core/`                    | parser/loader framework, Python package `openelex`              |
 | `docs/`                    | project documentation (pending import)                          |
-| `specs/`                   | data formats and specifications (pending import)                |
+| `specs/`                   | data formats and specifications                                 |
 | `tests/`                   | validation tests for data files                                 |
 | `data/`                    | gitignored; per-state data clones and pipeline output           |
 
