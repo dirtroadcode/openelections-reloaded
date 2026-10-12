@@ -1,0 +1,15 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+bba4a4a = {path = ".",editable = true}
+"urllib3" = ">=1.2.3"
+"requests" = ">=2.20.0"
+openelections-core = {path = "."}
+
+[dev-packages]
+mock = "*"
+"factory-boy" = "==2.4.1"
+nose = "*"
